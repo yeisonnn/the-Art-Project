@@ -13,4 +13,6 @@ We built this project using:
 - React library.
 - Harvart Art Museums API.
 
+*Basic Styling and initial setup was provide by Fullstack Academy.*
+
 [visit this site](https://yeisson-art-collector.netlify.app/)
