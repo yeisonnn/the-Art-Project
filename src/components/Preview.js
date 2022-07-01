@@ -52,14 +52,14 @@ const Preview = (props) => {
       <header className="pagination">
         <button
           className="previous"
-          disabled={false}
+          disabled={searchResults.info.page > 1 ? false : true}
           onClick={previousPageButtonHandler}
         >
           Previous
         </button>
         <button
           className="next"
-          disabled={false}
+          disabled={!Object.keys(searchResults.info).length ? true : false}
           onClick={nextPageButtonHandler}
         >
           Next
