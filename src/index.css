@@ -7,8 +7,12 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #fff;
+}
+
 body {
-  height: 100vh;
+  height: 150vh;
 }
 
 #root {
@@ -188,6 +192,7 @@ body {
 
   background: #ddd;
   overflow: hidden;
+  height: max-content;
 }
 
 .object-feature {
@@ -196,7 +201,8 @@ body {
   display: grid;
 
   grid-template-columns: minmax(0, 1fr) 420px;
-  grid-template-rows: auto minmax(0, 1fr);
+  /* grid-template-rows: auto minmax(0, 1fr); */
+  grid-template-rows: min-content 1fr;
 
   background: #fff;
   box-shadow: 0 4px 12px -3px black;

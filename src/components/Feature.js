@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import Searchable from './Searchable';
 
-import { fetchQueryResultsFromTermAndValue } from '../api/api';
-
 const Feature = (props) => {
   const { featuredResult, setIsLoading, setSearchResults } = props;
 
@@ -12,6 +10,7 @@ const Feature = (props) => {
         <h3>{featuredResult.title}</h3>
         <h4>{featuredResult.dated}</h4>
       </header>
+
       <section className="facts">
         <span className="title">Culture</span>
         <span className="content">
@@ -22,10 +21,13 @@ const Feature = (props) => {
             setSearchResults={setSearchResults}
           />
         </span>
+
         <span className="title">Division</span>
         <span className="content">{featuredResult.division}</span>
+
         <span className="title">Department</span>
         <span className="content">{featuredResult.department}</span>
+
         <span className="title">Technique</span>
         <span className="content">
           <Searchable
@@ -35,6 +37,7 @@ const Feature = (props) => {
             setSearchResults={setSearchResults}
           />
         </span>
+
         <span className="title">Medium</span>
         <span className="content">
           <Searchable
@@ -44,6 +47,7 @@ const Feature = (props) => {
             setSearchResults={setSearchResults}
           />
         </span>
+
         <span className="title">Author</span>
         <span className="content">
           {featuredResult.people
@@ -51,6 +55,7 @@ const Feature = (props) => {
             : 'Unknown'}
         </span>
       </section>
+
       <section>
         {featuredResult.primaryimageurl ? (
           <img

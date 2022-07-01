@@ -16,13 +16,17 @@ const Search = (props) => {
   const [classification, setClassification] = useState('any');
 
   const promiseAll = async () => {
-    const [century, classification] = await Promise.all([
-      fetchAllCenturies(),
-      fetchAllClassifications(),
-    ]);
+    try {
+      const [century, classification] = await Promise.all([
+        fetchAllCenturies(),
+        fetchAllClassifications(),
+      ]);
 
-    setCenturyList(century);
-    setClassificationList(classification);
+      setCenturyList(century);
+      setClassificationList(classification);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {

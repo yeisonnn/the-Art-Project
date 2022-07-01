@@ -14,7 +14,7 @@ function App() {
   const [featuredResult, setFeaturedResult] = useState(null);
 
   return (
-    <div>
+    <div className="app">
       <Title setIsLoading={setIsLoading} setSearchResults={setSearchResults} />
       <Search
         searchResults={searchResults}
